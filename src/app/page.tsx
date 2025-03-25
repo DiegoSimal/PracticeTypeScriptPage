@@ -157,7 +157,7 @@ export default function Home() {
 
                 <div className="flex flex-direction: row w-180 items-center">
                   <div>
-                    <Image src={isProduction ? "images/irrigadores-dentales-de-viaje.jpg" : "/images/Irrigadores-dentales-de-viaje.jpg"} alt="Logo" width={1500} height={1500} />
+                    <Image src={isProduction ? "images/Irrigadores-dentales-de-viaje.jpg" : "/images/Irrigadores-dentales-de-viaje.jpg"} alt="Logo" width={1500} height={1500} />
                   </div>
                   <div>
                     <TitleSize title="De viaje" />
