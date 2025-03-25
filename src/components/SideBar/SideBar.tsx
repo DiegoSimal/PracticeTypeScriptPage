@@ -28,7 +28,7 @@ function Sidebar({ children, expanded, setExpanded }: {children: React.ReactNode
         <nav className="flex h-full flex-col border-r bg-blue-900 text-white shadow-sm">
           <div className="flex items-center justify-between p-4 pb-2">
             <Image
-              src={isProduction ? "tu-sonrisa.jpg" : "/tu-sonrisa.jpg"}
+              src={isProduction ? "images/tu-sonrisa.jpg" : "/images/tu-sonrisa.jpg"}
               className={`overflow-hidden transition-all ${
                 expanded ? 'w-32' : 'w-0'
               }`}
