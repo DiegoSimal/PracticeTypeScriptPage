@@ -12,6 +12,7 @@ import * as React from "react";
 export default function Home() {
   const [imageUrl, setImageUrl] = React.useState<string>("");
   const router = useRouter();
+  const isProduction = process.env.NODE_ENV === "production"
   console.log(router)
   // const [{/*isPopUpOpen*/}, setIsPopUpOpen] = React.useState<boolean>(false);
 
@@ -41,12 +42,12 @@ export default function Home() {
             <section>
               <div id="consejos" className="flex flex-col items-center">
                 <div className="flex flex-direction: row" >
-                  <div><ImageButton imageSrc="/images/foto1.png" alt="Enlace a opinión sobre las férulas invisaling y comparación con los brackets" href="https://tusonrisa.org/opinion-invisalign-vs-brackets/" setImageUrl={setImageUrl} /></div>
-                  <div><ImageButton imageSrc="/images/foto2.png" alt="" href="https://tusonrisa.org/citricos-dientes/" setImageUrl={setImageUrl} /></div>
+                  <div><ImageButton imageSrc={isProduction ? "images/foto1.png" : "/images/foto1.png"} alt="Enlace a opinión sobre las férulas invisaling y comparación con los brackets" href="https://tusonrisa.org/opinion-invisalign-vs-brackets/" setImageUrl={setImageUrl} /></div>
+                  <div><ImageButton imageSrc={isProduction ? "images/foto2.png" : "/images/foto2.png"} alt="" href="https://tusonrisa.org/citricos-dientes/" setImageUrl={setImageUrl} /></div>
                 </div>
                 <div className="flex flex-direction: row">
-                  <div><ImageButton imageSrc="/images/foto3.png" alt="" href="https://tusonrisa.org/enjuague-bucal-para-gingivitis/" setImageUrl={setImageUrl} /></div>
-                  <div><ImageButton imageSrc="/images/foto4.png" alt="" href="https://tusonrisa.org/cepillar-lengua/" setImageUrl={setImageUrl} /></div>
+                  <div><ImageButton imageSrc={isProduction ? "images/foto3.png" : "/images/foto3.png"} alt="" href="https://tusonrisa.org/enjuague-bucal-para-gingivitis/" setImageUrl={setImageUrl} /></div>
+                  <div><ImageButton imageSrc={isProduction ? "images/foto4.png" : "/images/foto4.png"} alt="" href="https://tusonrisa.org/cepillar-lengua/" setImageUrl={setImageUrl} /></div>
                 </div>
                 <br />
                 <div> {/* className="flex border border-zinc-600 w-100 h-100" */}
@@ -80,7 +81,7 @@ export default function Home() {
 
               <section>
                 <TitleSize title="Ventajas de usarlo" />
-                <div className="flex justify-center p-5"><Image src="/images/Ventajas.png" alt="" width={380} height={380} /></div>
+                <div className="flex justify-center p-5"><Image src={isProduction ? "images/Ventajas.png" : "/images/Ventajas.png"} alt="" width={380} height={380} /></div>
                 <br />
 
                 <ParagraphSize
@@ -101,17 +102,17 @@ export default function Home() {
                 información contrastada y de actualidad sobre salud bucodental:"/>
               <div className="flex flex-direction: row justify-center pt-5 pe-15">
                 <div>
-                  <button className="p-2"><a href="#consejos"><Image className=" hover:w-[150]" src="/images/Consejos.jpg" alt="descripcion" width={100} height={100} /></a></button>
+                  <button className="p-2"><a href="#consejos"><Image className=" hover:w-[150]" src={isProduction ? "images/Consejos.jpg" : "/images/Consejos.jpg"} alt="descripcion" width={100} height={100} /></a></button>
                   <p className="text-center hover:text-blue-500">Consejos</p>
                 </div>
 
                 <div>
-                  <button className="p-2"><a href="#reseñas"><Image className=" hover:w-[150]" src="/images/reseñas.jpg" alt="" width={100} height={100} /></a></button>
+                  <button className="p-2"><a href="#reseñas"><Image className=" hover:w-[150]" src={isProduction ? "images/reseñas.jpg" : "/images/reseñas.jpg"} alt="" width={100} height={100} /></a></button>
                   <p className="text-center hover:text-blue-500">Reseñas</p>
                 </div>
 
                 <div>
-                  <button className="p-2"><a href="#guia"><Image className=" hover:w-[150]" src="/images/guias.jpg" alt="" width={100} height={100} /></a></button>
+                  <button className="p-2"><a href="#guia"><Image className=" hover:w-[150]" src={isProduction ? "images/guias.jpg" : "/images/guias.jpg"} alt="" width={100} height={100} /></a></button>
                   <p className="text-center hover:text-blue-500">Guías</p>
                 </div>
               </div>
@@ -148,14 +149,14 @@ export default function Home() {
                     uso intensivo y personalizado en el hogar"/>
                   </div>
                   <div>
-                    <Image src="/images/irrigador-de-sobremesa.jpg" alt="Logo" width={1200} height={1200} />
+                    <Image src={isProduction ? "images/irrigador-de-sobremesa.jpg" : "/images/irrigador-de-sobremesa.jpg"} alt="Logo" width={1200} height={1200} />
                   </div>
                 </div>
                 <br />
 
                 <div className="flex flex-direction: row w-180 items-center">
                   <div>
-                    <Image src="/images/irrigadores-dentales-de-viaje.jpg" alt="Logo" width={1500} height={1500} />
+                    <Image src={isProduction ? "images/irrigadores-dentales-de-viaje.jpg" : "/images/irrigadores-dentales-de-viaje.jpg"} alt="Logo" width={1500} height={1500} />
                   </div>
                   <div>
                     <TitleSize title="De viaje" />
@@ -180,7 +181,7 @@ export default function Home() {
                     los hace ideales para una higiene bucal moderna y eficiente"/>
                   </div>
                   <div>
-                    <Image src="/images/irrigadores-inalambricos.jpg" alt="Logo" width={1500} height={1500} />
+                    <Image src={isProduction ? "images/irrigadores-inalambricos.jpg" : "/images/irrigadores-inalambricos.jpg"} alt="Logo" width={1500} height={1500} />
                   </div>
                 </div>
               </div>
