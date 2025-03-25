@@ -13,7 +13,7 @@ export default function ImageButton({ imageSrc, alt, href, setImageUrl }:
                     // setIsPopUpOpen(false);
                     setImageUrl("");
                 }}
-            ><a href={href}><Image src={imageSrc} alt={alt} width={250} height={250} /></a>
+            ><a href={href}><Image unoptimized src={imageSrc} alt={alt} width={250} height={250} /></a>
             </button>
     )
 }

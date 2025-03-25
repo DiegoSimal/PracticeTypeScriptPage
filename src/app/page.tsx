@@ -41,7 +41,7 @@ export default function Home() {
             <section>
               <div id="consejos" className="flex flex-col items-center">
                 <div className="flex flex-direction: row" >
-                  <div><ImageButton imageSrc="/images/foto2.png" alt="Enlace a opinión sobre las férulas invisaling y comparación con los brackets" href="https://tusonrisa.org/opinion-invisalign-vs-brackets/" setImageUrl={setImageUrl} /></div>
+                  <div><ImageButton imageSrc="/images/foto1.png" alt="Enlace a opinión sobre las férulas invisaling y comparación con los brackets" href="https://tusonrisa.org/opinion-invisalign-vs-brackets/" setImageUrl={setImageUrl} /></div>
                   <div><ImageButton imageSrc="/images/foto2.png" alt="" href="https://tusonrisa.org/citricos-dientes/" setImageUrl={setImageUrl} /></div>
                 </div>
                 <div className="flex flex-direction: row">
