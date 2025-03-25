@@ -8,6 +8,8 @@ import { FaEllipsisV } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 
+const isProduction = process.env.NODE_ENV === "production"
+
 // This sidebar component is for both mobile and desktop
 function Sidebar({ children, expanded, setExpanded }: {children: React.ReactNode, expanded: boolean, setExpanded: React.Dispatch<React.SetStateAction<boolean>>}) {
   return (
@@ -26,7 +28,7 @@ function Sidebar({ children, expanded, setExpanded }: {children: React.ReactNode
         <nav className="flex h-full flex-col border-r bg-blue-900 text-white shadow-sm">
           <div className="flex items-center justify-between p-4 pb-2">
             <Image
-              src="/tu-sonrisa.jpg"
+              src={isProduction ? "tu-sonrisa.jpg" : "/tu-sonrisa.jpg"}
               className={`overflow-hidden transition-all ${
                 expanded ? 'w-32' : 'w-0'
               }`}
