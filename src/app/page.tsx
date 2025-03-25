@@ -8,7 +8,7 @@ import TitleSize from "@/components/TitleSize/TitleSize";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import * as React from "react";
-import image1 from "../components/images/foto1.png"
+// import image1 from "../components/images/foto1.png"
 
 export default function Home() {
   const [imageUrl, setImageUrl] = React.useState<string>("");
@@ -43,7 +43,7 @@ export default function Home() {
             <section>
               <div id="consejos" className="flex flex-col items-center">
                 <div className="flex flex-direction: row" >
-                  <div><ImageButton imageSrc={image1.toString()} alt="Enlace a opinión sobre las férulas invisaling y comparación con los brackets" href="https://tusonrisa.org/opinion-invisalign-vs-brackets/" setImageUrl={setImageUrl} /></div>
+                  <div><ImageButton imageSrc={isProduction ? "images/foto2.png" : "/images/foto2.png"} alt="Enlace a opinión sobre las férulas invisaling y comparación con los brackets" href="https://tusonrisa.org/opinion-invisalign-vs-brackets/" setImageUrl={setImageUrl} /></div>
                   <div><ImageButton imageSrc={isProduction ? "images/foto2.png" : "/images/foto2.png"} alt="" href="https://tusonrisa.org/citricos-dientes/" setImageUrl={setImageUrl} /></div>
                 </div>
                 <div className="flex flex-direction: row">
